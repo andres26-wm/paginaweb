@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoja de vida · Victor Andres Taquez Yepez</title>
+<style>
+:root {
+  --bg:#eef2ff; --card:#ffffff; --txt:#0f172a; --sub:#475569;
+  --a1:#0b5fff; --a2:#7c3aed; --linea:#e2e8f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#0b1020; --card:#131a30; --txt:#e8ecff; --sub:#9aa7c7; --linea:#243056; }
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Segoe UI',system-ui,Arial,sans-serif; background:var(--bg); color:var(--txt);
+  padding:28px 14px; line-height:1.55; }
+.hoja { max-width:1000px; margin:auto; background:var(--card); border-radius:22px; overflow:hidden;
+  box-shadow:0 20px 60px rgba(11,95,255,.18); }
+header { background:linear-gradient(120deg,var(--a1),var(--a2)); color:#fff; padding:38px 36px;
+  display:flex; gap:26px; align-items:center; flex-wrap:wrap; }
+.avatar { width:104px; height:104px; border-radius:50%; background:rgba(255,255,255,.18);
+  border:3px solid rgba(255,255,255,.7); display:grid; place-items:center; font-size:38px;
+  font-weight:700; letter-spacing:2px; flex:none; }
+header h1 { font-size:clamp(26px,4.5vw,38px); line-height:1.15; }
+.titulo { font-size:18px; font-weight:600; margin-top:6px; }
+.subtitulo { opacity:.88; font-size:14px; margin-top:2px; }
+.contacto { list-style:none; display:flex; flex-wrap:wrap; gap:8px 18px; margin-top:14px; font-size:14px; }
+.contacto span { margin-right:6px; }
+.cuerpo { display:grid; grid-template-columns:300px 1fr; }
+aside { background:color-mix(in srgb,var(--a1) 6%,var(--card)); padding:28px 26px;
+  border-right:1px solid var(--linea); }
+main { padding:28px 34px; }
+section { margin-bottom:26px; }
+h2 { font-size:14px; text-transform:uppercase; letter-spacing:1.6px; color:var(--a1);
+  padding-bottom:6px; margin-bottom:14px; border-bottom:2px solid var(--a1); display:inline-block; }
+h3 { font-size:16px; }
+.fila { display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap; align-items:baseline; }
+.fecha { font-size:13px; color:var(--a2); font-weight:600; }
+.lugar { color:var(--sub); font-size:14px; margin-bottom:4px; }
+.item { margin-bottom:16px; padding-left:14px; border-left:3px solid var(--a1); }
+ul { padding-left:18px; font-size:14.5px; } li { margin-bottom:3px; }
+.barra { margin-bottom:12px; font-size:13.5px; }
+.barra-top { display:flex; justify-content:space-between; margin-bottom:4px; }
+.pista { height:8px; background:var(--linea); border-radius:8px; overflow:hidden; }
+.relleno { height:100%; width:var(--w); border-radius:8px;
+  background:linear-gradient(90deg,var(--a1),var(--a2)); animation:crece 1.2s ease-out; }
+@keyframes crece { from { width:0; } }
+.chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+.chip { background:color-mix(in srgb,var(--a1) 12%,transparent); color:var(--a1); padding:5px 12px;
+  border-radius:999px; font-size:13px; font-weight:600; }
+.chip-alt { background:color-mix(in srgb,var(--a2) 14%,transparent); color:var(--a2); }
+.nota { font-size:12px; color:var(--sub); margin-top:6px; }
+.tarjetas { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; }
+.tarjeta { border:1px solid var(--linea); border-radius:14px; padding:14px 16px; transition:.25s; }
+.tarjeta:hover { transform:translateY(-4px); border-color:var(--a1); box-shadow:0 10px 24px rgba(11,95,255,.15); }
+.tarjeta p { color:var(--sub); font-size:14px; margin-top:4px; }
+.idioma { font-size:14px; margin-bottom:6px; } .idioma span { color:var(--sub); }
+main > section > p { font-size:15px; }
+@media (max-width:760px) {
+  .cuerpo { grid-template-columns:1fr; }
+  aside { border-right:none; border-bottom:1px solid var(--linea); }
+  header { padding:28px 22px; } main { padding:24px 22px; }
+}
+@media print {
+  body { background:#fff; padding:0; } .hoja { box-shadow:none; border-radius:0; }
+  header, .relleno { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+}
+</style>
+</head>
+<body>
+<div class="hoja">
+  <header>
+    <div class="avatar">VY</div>
+    <div>
+      <h1>Victor Andres Taquez Yepez</h1>
+      <p class="titulo">Estudiante de Ingeniería Informática</p>
+      <p class="subtitulo">Servicio y Atención al Cliente · Apasionado por la tecnología</p>
+      <ul class="contacto"><li><span>📍</span>Ciudad, Colombia</li><li><span>📞</span>Tu teléfono</li><li><span>✉️</span>tucorreo@email.com</li><li><span>🔗</span>linkedin.com/in/tu-perfil</li></ul>
+    </div>
+  </header>
+  <div class="cuerpo">
+    <aside><section><h2>Habilidades técnicas</h2><div class="barra"><div class="barra-top"><span>Lógica de programación</span><span>70%</span></div><div class="pista"><div class="relleno" style="--w:70%"></div></div></div><div class="barra"><div class="barra-top"><span>Algoritmos y pseudocódigo (PSeInt)</span><span>65%</span></div><div class="pista"><div class="relleno" style="--w:65%"></div></div></div><div class="barra"><div class="barra-top"><span>Conceptos básicos de programación</span><span>55%</span></div><div class="pista"><div class="relleno" style="--w:55%"></div></div></div><div class="barra"><div class="barra-top"><span>Ofimática</span><span>70%</span></div><div class="pista"><div class="relleno" style="--w:70%"></div></div></div><div class="chips"><span class="chip chip-alt">Python</span><span class="chip chip-alt">Git y GitHub</span><span class="chip chip-alt">HTML y CSS</span></div><p class="nota">En aprendizaje</p></section><section><h2>Habilidades profesionales</h2><div class="chips"><span class="chip">Atención al cliente</span><span class="chip">Comunicación efectiva</span><span class="chip">Resolución de problemas</span><span class="chip">Trabajo en equipo</span><span class="chip">Aprendizaje rápido</span><span class="chip">Responsabilidad</span></div></section><section><h2>Idiomas</h2><div class="fila idioma"><strong>Español</strong><span>Nativo</span></div><div class="fila idioma"><strong>Inglés</strong><span>Básico / Intermedio / Avanzado</span></div></section></aside>
+    <main><section><h2>Perfil profesional</h2><p>Estudiante de primer semestre de Ingeniería Informática con formación como tecnólogo en Servicio y Atención al Cliente. Combino habilidades de comunicación y resolución de problemas con una base en lógica de programación y algoritmos. Busco una oportunidad para aportar mientras fortalezco mis conocimientos técnicos y crezco profesionalmente en el sector tecnológico.</p></section><section><h2>Formación académica</h2><div class="item"><div class="fila"><h3>Ingeniería Informática</h3><span class="fecha">En curso · 1.er semestre</span></div><p class="lugar">Tu universidad</p></div><div class="item"><div class="fila"><h3>Tecnólogo en Servicio y Atención al Cliente</h3><span class="fecha">Año de graduación</span></div><p class="lugar">Tu institución</p></div></section><section><h2>Experiencia laboral</h2><div class="item"><div class="fila"><h3>Tu cargo</h3><span class="fecha">Mes/Año – Mes/Año</span></div><p class="lugar">Empresa</p><ul><li>Atendí clientes diariamente, resolviendo solicitudes y reclamos de forma oportuna.</li><li>Agrega aquí un logro medible (tiempos, satisfacción, ventas).</li></ul></div></section><section><h2>Proyectos</h2><div class="tarjetas"><div class="tarjeta"><h3>Proyecto en PSeInt</h3><p>Describe qué hace tu programa (calculadora, notas, inventario...).</p></div><div class="tarjeta"><h3>Próximo: portafolio en GitHub</h3><p>Sube tus proyectos y agrega el enlace aquí.</p></div></div></section></main>
+  </div>
+</div>
+</body>
+</html>
